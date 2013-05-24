@@ -41,7 +41,7 @@
 		    }
 
 		    $createData = explode('/', urldecode($_SERVER['REQUEST_URI']));
-		    $pageName = $createData[1] ? $createData[1] : "Index";
+		    $pageName = $createData[1] ?: "Index";
 		    unset($createData[0], $createData[1]);
 
 		    try {
